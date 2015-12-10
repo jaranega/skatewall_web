@@ -1,0 +1,620 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+center,
+u,
+b,
+i {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+:focus {
+  outline: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote,
+q {
+  quotes: "" "";
+}
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+.anti-alias {
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+.comunArrows {
+  width: 0;
+  height: 0;
+  position: relative;
+  line-height: 0px;
+}
+.anti-alias {
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url('../fonts/HelveticaNeue-Roman.eot');
+  src: url('../fonts/HelveticaNeue-Roman.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue-Roman.woff') format('woff'), url('../fonts/HelveticaNeue-Roman.ttf') format('truetype'), url('../fonts/HelveticaNeue-Roman.svg#HelveticaNeue-Roman') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url('../fonts/HelveticaNeue-Bold.eot');
+  src: url('../fonts/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue-Bold.woff') format('woff'), url('../fonts/HelveticaNeue-Bold.ttf') format('truetype'), url('../fonts/HelveticaNeue-Bold.svg#HelveticaNeue-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url('../fonts/HelveticaNeue-MedIta.eot');
+  src: url('../fonts/HelveticaNeue-MedIta.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue-MedIta.woff') format('woff'), url('../fonts/HelveticaNeue-MedIta.ttf') format('truetype'), url('../fonts/HelveticaNeue-MedIta.svg#HelveticaNeue-MedIta') format('svg');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url('../fonts/HelveticaNeue-BoldIta.eot');
+  src: url('../fonts/HelveticaNeue-BoldIta.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue-BoldIta.woff') format('woff'), url('../fonts/HelveticaNeue-BoldIta.ttf') format('truetype'), url('../fonts/HelveticaNeue-BoldIta.svg#HelveticaNeue-BoldIta') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.hide {
+  display: none;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue';
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  background: url('../img/pattern.jpg') left top repeat;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.wrapper {
+  position: relative;
+}
+.visible-small {
+  display: block;
+}
+.visible-medium,
+.visible-xxl {
+  display: none;
+}
+#header,
+#main .module {
+  padding: 17px;
+}
+#header {
+  position: relative;
+  overflow: hidden;
+}
+#header #menu-mobile {
+  width: 26px;
+  float: left;
+  cursor: pointer;
+}
+#header #logo {
+  width: 27px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+#header #share {
+  display: block;
+  width: 60px;
+  float: right;
+}
+#header #share li {
+  float: left;
+  height: 27px;
+  width: 23px;
+  line-height: 27px;
+  cursor: pointer;
+  /*span{
+                display: none;
+            }*/
+  /*&#share-twitter{
+                background: url('../img/twitter.svg') left center no-repeat;
+                background-size: 23px 23px;
+            }*/
+}
+#header #share li img {
+  height: 23px;
+  width: 23px;
+  margin-top: 2px;
+}
+#header #share li#share-fb {
+  /*background: url('../img/fb.svg') left center no-repeat;
+                background-size: 23px 23px;*/
+  margin-right: 12px;
+}
+#main .module {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+#main .module h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #5e5e5e;
+  text-align: center;
+  letter-spacing: 2px;
+}
+#main .module p {
+  margin-bottom: 25px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #5e5e5e;
+  text-align: center;
+}
+#main .module p .bold {
+  font-weight: 700;
+}
+#main .module .profile {
+  text-align: center;
+  margin: 18px 0;
+  color: #5e5e5e;
+}
+#main .module .profile span {
+  display: block;
+  line-height: 23px;
+}
+#main .module .profile span.name {
+  font-weight: 700;
+}
+#main .module .profile span.job {
+  font-weight: 500;
+  font-style: italic;
+}
+#main .module.odd {
+  background-color: #f6f6f6;
+}
+#main .module.even {
+  background-color: #ffffff;
+}
+#main .module#project img {
+  display: block;
+  margin: 0 auto;
+  width: 175px;
+}
+#main .module#skate-module {
+  position: relative;
+}
+#main .module#skate-module #skate {
+  width: 118px;
+  margin: 0 auto;
+  position: relative;
+}
+#main .module#skate-module #skate #eyes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity = 0);
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+}
+#main .module#skate-module #skate #eyes.on {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  filter: alpha(opacity = 100);
+  opacity: 1;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  -webkit-transform: translateZ(0);
+}
+#main .module#skate-module #volume {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 22px;
+  height: 19px;
+  background: url('../img/sound.png') center top no-repeat;
+  background-size: 22px 45px;
+  cursor: pointer;
+}
+#main .module#skate-module #volume.off {
+  background-position: center bottom;
+}
+#main .module#why img {
+  display: block;
+  margin: 0 auto;
+  width: 145px;
+}
+#main .module#how .arduino {
+  margin-bottom: 25px;
+}
+#main .module#who .author .picture {
+  width: 125px;
+  margin: 0 auto;
+}
+#main .module#thanks {
+  padding-bottom: 172px;
+  background-image: url('../img/flower.png');
+  background-size: 186px 162px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+#main .module#thanks .profile {
+  margin: 18px 0;
+  /*span{
+                    display: inline-block;
+                }*/
+}
+#footer {
+  background: url('../img/footer.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#footer div {
+  /*height: 40px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;*/
+  padding: 13.75% 0px;
+  text-align: center;
+}
+#footer div span {
+  display: inline-block;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 36px;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  border-top: 2px dashed #fff;
+  border-bottom: 2px dashed #fff;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #000;
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  filter: alpha(opacity = 70);
+  opacity: 0.7;
+  display: none;
+}
+@media only screen and (min-width: 641px) {
+  .visible-small,
+  .visible-xxl {
+    display: none;
+  }
+  .visible-medium {
+    display: block;
+  }
+  .center {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  #header {
+    padding: 70px 0;
+  }
+  #header #logo {
+    position: relative;
+    left: auto;
+    right: auto;
+    float: left;
+    width: 47px;
+  }
+  #header #menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 72%;
+    margin: 0 auto;
+  }
+  #header #menu ul li {
+    float: left;
+    width: 25%;
+    line-height: 47px;
+    text-align: center;
+  }
+  #header #menu ul li span {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    color: #5e5e5e;
+    cursor: pointer;
+  }
+  #header #menu ul li:last-child {
+    padding-right: 0;
+  }
+  #header #share {
+    float: right;
+    width: auto;
+  }
+  #header #share li {
+    width: 37px;
+    height: 47px;
+    /*&#share-fb,
+                &#share-twitter{
+                    width: 37px;
+                    height: 47px;
+                    background-size: 37px;
+                }*/
+  }
+  #header #share li img {
+    height: 37px;
+    width: 37px;
+    margin-top: 5px;
+  }
+  #header #share li#share-fb {
+    margin-right: 16px;
+  }
+  #main .module {
+    padding: 70px 0;
+  }
+  #main .module h1 {
+    margin-bottom: 60px;
+    font-size: 20px;
+  }
+  #main .module p {
+    width: 77%;
+    max-width: 660px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+  #main .module#project img {
+    width: 347px;
+  }
+  #main .module#skate-module #skate {
+    width: 38.39%;
+    /*#eyes{
+                        .opacity(0);
+                        .transition(opacity 1s ease);
+                        &.on{
+                            .opacity();
+                            .transition(opacity 1s ease);
+                            -webkit-transform: translateZ(0);       // Fixing css transition/percentage bug in Chrome 
+                        }
+                    }*/
+  }
+  #main .module#skate-module #volume {
+    top: 30px;
+    right: 30px;
+    width: 36px;
+    height: 30px;
+    background-size: 36px 73px;
+  }
+  #main .module#why p {
+    margin-bottom: 50px;
+  }
+  #main .module#why img {
+    width: 356px;
+  }
+  #main .module#how #arduino-big {
+    max-width: 1070px;
+    margin: 0 auto 25px;
+  }
+  #main .module#who #authors {
+    overflow: auto;
+  }
+  #main .module#who #authors .author {
+    float: left;
+    width: 32.14%;
+    margin-left: 11.9%;
+  }
+  #main .module#who #authors .author p {
+    margin: 0;
+    width: auto;
+  }
+  #main .module#who #authors .author .picture {
+    width: 100%;
+    max-width: 260px;
+  }
+  #main .module#who #authors .author .profile {
+    margin: 35px 0;
+    font-size: 18px;
+  }
+  #main .module#thanks {
+    padding-bottom: 47.32%;
+    background-size: 50.17% auto;
+  }
+  #main .module#thanks .profile {
+    font-size: 18px;
+  }
+  #main .module#thanks .profile span {
+    display: inline-block;
+  }
+  #footer {
+    height: 210px;
+    background: url('../img/footer-big.jpg') center center no-repeat;
+    background-size: 1120px 210px;
+  }
+  #footer div {
+    height: 56px;
+    margin: auto;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  #footer div span {
+    height: 56px;
+    font-size: 20px;
+    line-height: 52px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #header #menu {
+    width: 77%;
+  }
+  #header #menu ul li span {
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /*.center{
+        width: 1024px;
+        margin: 0 auto;
+    }*/
+}
+@media only screen and (min-width: 1120px) {
+  /*.center{
+        width: 1120px;
+        margin: 0 auto;
+    }*/
+}
+@media only screen and (min-width: 1450px) {
+  .visible-xxl {
+    display: block;
+  }
+  .leaf {
+    animation: fading 1s 1;
+  }
+  .leaf#leaf1 {
+    position: absolute;
+    right: 50%;
+    top: 1118px;
+    width: 395px;
+    height: 425px;
+    margin-right: 320px;
+  }
+  .leaf#leaf2 {
+    position: absolute;
+    left: 50%;
+    top: 3300px;
+    width: 397px;
+    height: 522px;
+    margin-left: 320px;
+  }
+  @keyframes fading {
+    0% {
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+      filter: alpha(opacity = 0);
+      opacity: 0;
+    }
+    100% {
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      filter: alpha(opacity = 100);
+      opacity: 1;
+    }
+  }
+}

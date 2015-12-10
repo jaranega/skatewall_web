@@ -1,0 +1,509 @@
+@import "globals.less";
+
+@color1:                        #5e5e5e;
+
+*{
+    .box-sizing();
+}
+body{
+    font-family: 'Helvetica Neue';
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    .anti-alias();
+    background: url('../img/pattern.jpg') left top repeat;
+}
+img{
+    display: block;
+    width: 100%;
+}
+.wrapper{
+    position: relative;
+}
+.visible-small{
+    display: block;
+}
+.visible-medium,
+.visible-xxl{
+    display: none;
+}
+#header,
+#main .module{
+    // padding: 35px @padding_mobile;
+    padding: 17px;
+}
+#header{
+    position: relative;
+    overflow: hidden;
+    #menu-mobile{
+        width: 26px;
+        float: left;
+        cursor: pointer;
+    }
+    #logo{
+        width: 27px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    #share{
+        display: block;
+        width: 60px;
+        float: right;
+        li{
+            float: left;
+            height: 27px;
+            width: 23px;
+            line-height: 27px;
+            cursor: pointer;
+            /*span{
+                display: none;
+            }*/
+            img{
+                height: 23px;
+                width: 23px;
+                margin-top: 2px;
+            }
+            &#share-fb{
+                /*background: url('../img/fb.svg') left center no-repeat;
+                background-size: 23px 23px;*/
+                margin-right: 12px;
+            }
+            /*&#share-twitter{
+                background: url('../img/twitter.svg') left center no-repeat;
+                background-size: 23px 23px;
+            }*/
+        }
+    }
+}
+#main{
+    .module{
+        padding-top: 36px;
+        padding-bottom: 36px;
+        h1{
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            color: @color1;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        p{
+            margin-bottom: 25px;
+            font-weight: 400;
+            // font-size: 15px;
+            line-height: 1.5em;
+            color: @color1;
+            text-align: center;
+            .bold{
+                font-weight: 700;
+            }
+        }
+        .profile{
+            text-align: center;
+            margin: 18px 0;
+            color: @color1;
+            span{
+                display: block;
+                line-height: 23px;
+                &.name{
+                    font-weight: 700;
+                }
+                &.job{
+                    font-weight: 500;
+                    font-style: italic;
+                }
+            }
+        }
+        &.odd{
+            background-color: #f6f6f6;
+        }
+        &.even{
+            background-color: #ffffff;
+        }
+        &#project{
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 175px;
+            }
+        }
+        &#skate-module{
+            position: relative;
+            #skate{
+                width: 118px;
+                margin: 0 auto;
+                position: relative;
+                #board{
+
+                }
+                #eyes{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 100;
+                    .opacity(0);
+                    .transition(opacity 1s ease);
+                    &.on{
+                        .opacity();
+                        .transition(opacity 1s ease);
+                        -webkit-transform: translateZ(0);       // Fixing css transition/percentage bug in Chrome 
+                    }
+                }
+            }
+            #volume{
+                position: absolute;
+                top: 17px;
+                right: 17px;
+                width: 22px;
+                height: 19px;
+                background: url('../img/sound.png') center top no-repeat;
+                background-size: 22px 45px;
+                cursor: pointer;
+                // &:hover,
+                &.off{
+                    background-position: center bottom;
+                    // background: url('../img/sound.png') center bottom no-repeat;
+                }
+            }
+        }
+        &#why{
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 145px;
+            }
+        }
+        &#how{
+            .arduino{
+                margin-bottom: 25px;
+            }
+        }
+        &#who{
+            .author{
+                .picture{
+                    width: 125px;
+                    margin: 0 auto;
+                }
+            }
+        }
+        &#thanks{
+            // padding-bottom: 131px;
+            padding-bottom: 172px;
+            background-image: url('../img/flower.png');
+            // background-size: 136px 119px;
+            background-size: 186px 162px;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            .profile{
+                margin: 18px 0;
+                /*span{
+                    display: inline-block;
+                }*/
+            }
+        }
+    }
+}
+#footer{
+    // height: 113px;
+    background: url('../img/footer.jpg') center center no-repeat;
+    // background-size: 320px 113px;
+    background-size: cover;
+    position: relative;
+    div{
+        /*height: 40px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;*/
+        // padding: 36px 0;
+        padding: 13.75% 0px;
+        text-align: center;
+        span{
+            display: inline-block;
+            height: 40px;
+            font-size: 18px;
+            font-weight: 700;
+            font-style: italic;
+            line-height: 36px;
+            color: #fff;
+            letter-spacing: 2px;
+            text-align: center;
+            border-top: 2px dashed #fff;
+            border-bottom: 2px dashed #fff;
+        }
+    }    
+}
+#overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #000;
+    .opacity(.7);
+    display: none;
+}
+
+
+
+// Medium (641 - 1023px)
+@media only screen and (min-width: 641px) {
+    .visible-small,
+    .visible-xxl{
+        display: none;
+    }
+    .visible-medium{
+        display: block;
+    }
+    .center{
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+    #header{
+        padding: 70px 0;
+        #logo{
+            position: relative;
+            left: auto;
+            right: auto;
+            float: left;
+            width: 47px;
+        }
+        #menu{
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 72%;
+            margin: 0 auto;
+            ul{
+                li{
+                    float: left;
+                    // margin-right: 11%;
+                    width: 25%;
+                    line-height: 47px;
+                    text-align: center;
+                    span{
+                        font-weight: 700;
+                        font-style: normal;
+                        font-size: 14px;
+                        color: @color1;
+                        // letter-spacing: 1px;
+                        cursor: pointer;
+                    }
+                    &:last-child{
+                        // margin-right: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        #share{
+            float: right;
+            width: auto;
+            li{
+                // margin-top: 0;
+                width: 37px;
+                height: 47px;
+                img{
+                    height: 37px;
+                    width: 37px;
+                    margin-top: 5px;
+                }
+                &#share-fb{
+                    margin-right: 16px;
+                }
+                /*&#share-fb,
+                &#share-twitter{
+                    width: 37px;
+                    height: 47px;
+                    background-size: 37px;
+                }*/
+            }
+        }
+    }
+    #main{
+        .module{
+            padding: 70px 0;
+            h1{
+                margin-bottom: 60px;
+                font-size: 20px;
+            }
+            p{
+                width: 77%;
+                max-width: 660px;
+                // margin-bottom: 50px;
+                margin: 0 auto 50px;
+                font-size: 18px;
+                letter-spacing: 0.02em;
+                // line-height: 23px;
+            }
+            &#project{
+                img{
+                    width: 347px;
+                }
+            }
+            &#skate-module{
+                #skate{
+                    // width: 430px;
+                    width: 38.39%;
+                    /*#eyes{
+                        .opacity(0);
+                        .transition(opacity 1s ease);
+                        &.on{
+                            .opacity();
+                            .transition(opacity 1s ease);
+                            -webkit-transform: translateZ(0);       // Fixing css transition/percentage bug in Chrome 
+                        }
+                    }*/
+                }
+                #volume{
+                    top: 30px;
+                    right: 30px;
+                    width: 36px;
+                    height: 30px;
+                    background-size: 36px 73px;
+                }
+            }
+            &#why{
+                p{
+                    margin-bottom: 50px;
+                }
+                img{
+                    width: 356px;
+                }
+            }
+            &#how{
+                #arduino-big{
+                    max-width: 1070px;
+                    margin: 0 auto 25px;
+                }
+            }
+            &#who{
+                #authors{
+                    overflow: auto;
+                    .author{
+                        float: left;
+                        width: 32.14%;
+                        margin-left: 11.9%;
+                        p{
+                            margin: 0;
+                            width: auto;
+                        }
+                        .picture{
+                            width: 100%;
+                            max-width: 260px;
+                        }
+                        .profile{
+                            margin: 35px 0;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            &#thanks{
+                // padding-bottom: 530px;
+                // background-size: 562px 491px;
+                padding-bottom: 47.32%;
+                background-size: 50.17% auto;
+                .profile{
+                    font-size: 18px;
+                    span{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    #footer{
+        height: 210px;
+        background: url('../img/footer-big.jpg') center center no-repeat;
+        background-size: 1120px 210px;
+        div{
+            height: 56px;
+            margin: auto;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            span{
+                height: 56px;
+                font-size: 20px;
+                line-height: 52px;
+            }
+        }
+    }
+}
+
+// Medium (768 - 1023px)
+@media only screen and (min-width: 768px) {
+    #header{
+        #menu{
+            width: 77%;
+            ul{
+                li{
+                    span{
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Large (1024 - 1120px)
+@media only screen and (min-width: 1024px) {
+    /*.center{
+        width: 1024px;
+        margin: 0 auto;
+    }*/
+}
+
+// Extra Large (since 1120px)
+@media only screen and (min-width: 1120px) {
+    /*.center{
+        width: 1120px;
+        margin: 0 auto;
+    }*/
+}
+
+// Extra Extra Large (since 1450px)
+@media only screen and (min-width: 1450px) {
+    .visible-xxl{
+        display: block;
+    }
+
+    .leaf{
+        animation: fading 1s 1;
+        &#leaf1{
+            position: absolute;
+            right: 50%;
+            top: 1118px;
+            width: 395px;
+            height: 425px;
+            margin-right: 320px;
+        }
+        &#leaf2{
+            position: absolute;
+            left: 50%;
+            top: 3300px;
+            width: 397px;
+            height: 522px;
+            margin-left: 320px;
+        }
+    }
+
+    @keyframes fading {
+        0% {
+            .opacity(0);
+        }
+        100% {
+            .opacity();
+        }
+    }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Skate Wall</title>
+
+	<meta name='viewport' content="width=device-width, initial-scale=1">
+	<meta name="description" content="Skate Wall is a project born in LOLA Madrid in collaboration with Nomad Skateboards to decorate the walls of the agency in Barcelona.">
+	<meta name="keywords" content="skate, wall, arduino, nomad, lola, advertising">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="http://javiaranega.com/skatewall/">
+	<meta name="twitter:title" content="Skate Wall">
+	<meta property="og:title" content="Skate Wall" />
+	<meta property="og:description" content="Skate Wall is a project born in LOLA Madrid in collaboration with Nomad Skateboards to decorate the walls of the agency in Barcelona." />
+	<meta property="og:url" content="http://javiaranega.com/skatewall/" />
+	<meta property="og:image" content="http://javiaranega.com/images/facebook-share.png" />
+	<meta property="og:site_name" content="Skate Wall" />
+	<meta property="og:type" content="website" />
+	<meta property="fb:app_id" content="1672632419648150" />
+
+	<link rel="image_src" type="image/jpeg" href="images/facebook-share.png" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.sidr.light.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div class="center">
+			<header id="header">
+				<!-- <a id="menu-mobile" class="visible-small" href="#sidr">
+					<img src="img/menu-mobile.svg" alt="Menu" />
+				</a> -->
+				<img id="menu-mobile" class="visible-small" src="img/menu-mobile.svg" alt="Menu" />
+				<img id="logo" src="img/lola.svg" alt="LOLA" />
+				<nav id="menu" class="visible-medium">
+					<ul>
+						<li><span data-href="project">THE PROJECT</span></li>
+						<li><span data-href="why">WHY</span></li>
+						<li><span data-href="how">HOW</span></li>
+						<li><span data-href="who">WHO</span></li>
+					</ul>
+				</nav>
+				<ul id="share">
+					<li id="share-fb">
+						<img src="img/fb.svg" alt="Facebook">
+						<!-- <span>FACEBOOK</span> -->
+					</li>
+					<li id="share-twitter">
+						<img src="img/twitter.svg" alt="Twitter">
+						<!-- <span>TWITTER</span> -->
+					</li>
+				</ul>
+			</header>
+			<main id="main" role="main">
+				<section id="introduction" class="video">
+					<!-- Video de presentacion del proyecto -->
+					<img src="img/intro-video.jpg" alt="Introduction">
+				</section>
+				<section id="project" class="module odd">
+					<h1>- THE PROJECT -</h1>
+					<p><span class="bold">Skate wall</span> is a project born in <span class="bold">LOLA</span> Madrid in collaboration with <span class="bold">Nomad Skateboards</span> to decorate the walls of the agency in Barcelona. They gave us 10 recycle boards to create a new artistic expressions and this is our proposal.</p>
+					<img src="img/lola_and_nomad.png" alt="LOLA + NOMAD">
+				</section>
+				<section id="skate-module" class="module even">
+					<div id="skate">
+						<img id="board" src="img/skate.png" alt="Skate">
+						<img id="eyes" src="img/eyes.png" alt="Eyes">
+					</div>
+					<div id="volume" class="active"></div>
+					<audio id="audio1" src="audio/skate_sound.mp3" preload="auto" loop />
+				</section>
+				<section id="why" class="module odd">
+					<h1>- WHY -</h1>
+					<p><span class="bold">Our skateboard contains a message because we believe that every artistic expression, however small, try (or at least should try) to convey something; generate a reaction in the person facing it.</span></p>
+					<p><span class="bold">"Be brave little fellow"</span> is the idea we want to convey each one of us who spend our days in the agency; be brave and believe that you are capable to do anything you set your mind to. We are convinced tht things that scare you really are worth trying in all aspects of life. <span class="bold">"If it scares you, might be a good thing to try"</span>.</p>
+					<p>And to attract attention, we decided to add to the skateboard an interactive element: When you're passing in front of it, you hear sounds of trees, and if you get near the board, the eyes of a hidden animal lights on amid a roar sound.</p>
+					<img src="img/be-brave.png" alt="Be brave little fellow">
+				</section>
+				<section id="how" class="module even">
+					<h1>- HOW -</h1>
+					<p>The basis of the work is a digital illustration printed on vinyl. It is hand painted, but throught Photoshop brushes that simulate a real paintbrush, respecting different variables such as hand pressure and the type of brush tip.<br />From this, we leverage technology to give more power to the idea and the interaction that generates leads the message to have more impact. Behind the table, we have installed a small circuit based on Arduino that controls a proximity sensor, red LEDs and a small speaker.</p>
+					<img class="arduino visible-small" src="img/arduino-small.jpg" alt="Arduino">
+					<img id="arduino-big" class="arduino visible-medium" src="img/arduino-big.jpg" alt="Arduino">
+					<p>Thanks to the proximity sensor we know if we have someone in front of the table, how far and for how long. Based on these inputs we can decide waht sounds, stored in a mini sound card, can shoot. These sounds are amplified with another small chip that directs them to a loudspeaker. At the same time, we make the red LEDs embedded in the wood blink.</p>
+				</section>
+				<section class="video">
+					<!-- Video de desarrollo del proyecto -->
+					<img src="img/development-video.jpg" alt="Introduction">
+				</section>
+				<section id="who" class="module odd">
+					<h1>- WHO -</h1>
+					<div id="authors">
+						<div class="author">
+							<img class="picture" src="img/javier.png" alt="Javier Aránega">
+							<div class="profile">
+								<span class="name">Javier Aránega</span>
+								<span class="job">- Creative Developer at LOLA -</span>
+							</div>
+							<p>Those of us, who comes from the technical side, sometimes forget that technology is merely a tool that help us to express ourselves in an easier and simpler way. No matter how sophisticated a technology project can be, is useless if there isn't a good idea behind it, that's why working with Irene with the idea, as a starting point, has been very interesting. Enrich illustration around the initial concept was a good apprenticeship.</p>
+						</div>
+						<div class="author">
+							<img class="picture" src="img/irene.png" alt="Irene Granero">
+							<div class="profile">
+								<span class="name">Irene Granero</span>
+								<span class="job">- Visual Designer at LOLA -</span>
+							</div>
+							<p>As a Visual Designer, it has been very positive to collaborate in this project with Javi, it's wonderful to communicate what you want to express with more tools. It is very interesting to do projects like this, that makes you get out of what you usually do and this was one of them, a project were I was able to illustrate something that whenever I have to chance, I love to do.</p>
+						</div>
+					</div>
+				</section>
+				<section id="thanks" class="module even">
+					<h1>- SPECIAL THANKS -</h1>
+					<ul>
+						<li class="profile">
+							<span class="name">Junior Boggio</span>
+							<span class="job">- HTML Developer -</span>
+						</li>
+						<li class="profile">
+							<span class="name">Santi Davis</span>
+							<span class="job">- Creative Supervisor -</span>
+						</li>
+						<li class="profile">
+							<span class="name">Alejandro Encinas</span>
+							<span class="job">- English Copywriter -</span>
+						</li>
+						<li class="profile">
+							<span class="name">Ana Prado</span>
+							<span class="job">- Junior Creative & Photographer -</span>
+						</li>
+					</ul>
+					<!-- <img id="flower" src="img/flower.png" alt="flower"> -->
+				</section>
+			</main>
+			<footer id="footer">
+				<div>
+					<span>THANKS FOR WATCHING!</span>
+				</div>
+			</footer>
+		</div>
+		<div id="overlay"></div>
+		<img id="leaf1" src="img/leaf1.png" alt="Leaf" class="leaf visible-xxl">
+		<img id="leaf2" src="img/leaf2.png" alt="Leaf" class="leaf visible-xxl">
+	</div>
+	
+	<script>
+		// Facebook Share script
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1672632419648150',
+				xfbml      : true,
+				version    : 'v2.5'
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.sidr.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
